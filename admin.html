@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Admin Dashboard</title>
+    <link rel="stylesheet" href="adminstyle.css">
+    <!-- Add JavaScript links here -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">iCare</div>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#patients">Patients</a></li>
+            <li><a href="#doctors">Doctors</a></li>
+            <li><a href="#appointments">Appointments</a></li>
+            <li><a href="#logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Dashboard -->
+    <section id="dashboard">
+        <h1>Dashboard</h1>
+        <div class="dashboard-stats">
+            <div>Number of Patients: <span id="numPatients">2</span></div>
+            <div>Number of Doctors: <span id="numDoctors">3</span></div>
+            <div>Number of Appointments: <span id="numAppointments">4</span></div>
+        </div>
+        <div class="appointment-rate">
+            <!-- Graph or pie chart of appointment rate -->
+        </div>
+    </section>
+
+    <!-- Patients Section -->
+    <section id="patients">
+        <h1>Patients</h1>
+        <!-- List of Patients -->
+        <table id="patientList">
+            <!-- Table Header -->
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <!-- Table Body -->
+            <tbody>
+                <!-- Patient Row 1 -->
+                <tr>
+                    <td>John Doe</td>
+                    <td>32</td>
+                    <td>Male</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <!-- Patient Row 2 -->
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>28</td>
+                    <td>Female</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Add Patient Button -->
+        <button id="addPatientBtn">Add Patient</button>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors">
+        <h1>Doctors</h1>
+        <!-- List of Doctors -->
+        <table id="doctorList">
+            <!-- Table Header -->
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Specialization</th>
+                    <th>Contact</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <!-- Table Body -->
+            <tbody>
+                <!-- Doctor Row 1 -->
+                <tr>
+                    <td>Dr. Alice Johnson</td>
+                    <td>Cardiologist</td>
+                    <td>(555) 123-4567</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <!-- Doctor Row 2 -->
+                <tr>
+                    <td>Dr. Bob Brown</td>
+                    <td>Neurologist</td>
+                    <td>(555) 234-5678</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <!-- Doctor Row 3 -->
+                <tr>
+                    <td>Dr. Carol Williams</td>
+                    <td>Orthopedic Surgeon</td>
+                    <td>(555) 345-6789</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Add Doctor Button -->
+        <button id="addDoctorBtn">Add Doctor</button>
+    </section>
+
+    <!-- Appointments Section -->
+    <section id="appointments">
+        <h1>Appointments</h1>
+        <!-- List of Appointments -->
+        <table id="appointmentList">
+            <!-- Table Header -->
+            <thead>
+                <tr>
+                    <th>Patient Name</th>
+                    <th>Doctor Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <!-- Table Body -->
+            <tbody>
+                <!-- Appointment Row 1 -->
+                <tr>
+                    <td>John Doe</td>
+                    <td>Dr. Alice Johnson</td>
+                    <td>2023-04-01</td>
+                    <td>10:00 AM</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <!-- Appointment Row 2 -->
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>Dr. Bob Brown</td>
+                    <td>2023-04-01</td>
+                    <td>11:00 AM</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <!-- Appointment Row 3 -->
+                <tr>
+                    <td>John Doe</td>
+                    <td>Dr. Carol Williams</td>
+                    <td>2023-04-02</td>
+                    <td>9:00 AM</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <!-- Appointment Row 4 -->
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>Dr. Alice Johnson</td>
+                    <td>2023-04-02</td>
+                    <td>2:00 PM</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Add Appointment Button -->
+        <button id="addAppointmentBtn">Add Appointment</button>
+    </section>
+
+    <!-- Logout Button -->
+    <button id="logout">Logout</button>
+</body>
+</html>
