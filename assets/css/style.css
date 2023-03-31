@@ -170,3 +170,16 @@ h6 {
   font-weight: 600;
   color: #082744;
 }
+
+/* Contact Us */
+#message{
+  color: #2A4494;
+}
+.form-label{
+  color: #3291e6;
+}
+#sendMess{
+  background-color: #3291e6;
+  color: #ffff;
+
+}
