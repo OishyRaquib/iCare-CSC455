@@ -1,0 +1,11 @@
+Colour palette used:
+
+#122C34
+ 
+#224870
+
+#2A4494
+
+#4EA5D9
+
+#44CFCB

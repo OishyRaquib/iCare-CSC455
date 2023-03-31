@@ -1,0 +1,172 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #4EA5D9;
+}
+
+a {
+  color: #2A4494;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #44CFCB;
+  /* text-decoration: underline; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+#header {
+  background: #fff;
+}
+
+
+#header .logo {
+  font-size: 30px;
+  padding-left: 10px;
+  padding-top: 20px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  font-family: "Poppins", sans-serif;
+}
+
+#header .logo a {
+  color: #4EA5D9;
+  text-decoration: none;
+}
+
+
+
+.appointment-btn {
+  margin-left: 10px;
+  padding: 10px;
+  background: #2A4494;
+  color: #fff;
+  border-radius: 15px;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.appointment-btn:hover {
+  background-color: #4EA5D9;
+  color: #fff;
+}
+.navbar ul {
+  margin: 0;
+  padding-left: 100px;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+  padding-right: 10px;
+}
+
+/* Image display*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/background5.jpg") left center;
+  background-size: cover;
+}
+
+#hero .container {
+  position: relative;
+}
+
+#hero h1 {
+  margin: 10px;
+  padding-top: 5px;
+  padding-left: 5px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #224870;
+}
+
+#hero h2 {
+  color: #2A4494;
+  padding-left: 400px;
+  font-size: 24px;
+}
+
+#hero .btn-get-started {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 35px;
+  margin-left: 850px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #fff;
+  background: #1977cc;
+}
+
+#hero .btn-get-started:hover {
+  background: #3291e6;
+}
+.card{
+  padding:20px;
+  margin-left: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.card:hover{
+  box-shadow: 1px 1px 10px rgba(0,0,0,.3);
+  cursor: pointer;
+}
+#whyus{
+  background-color: #224870;
+  color: floralwhite;
+}
+#why{
+  color: #44CFCB;
+}
+
+/*--------------------------------------------------------------
+# Counts
+--------------------------------------------------------------*/
+.counts {
+  background: lightblue;
+  padding: 70px 0 60px;
+}
+
+.counts .count-box {
+  padding: 30px 30px 25px 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: #fff;
+}
+
+.counts .count-box i {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  background: #4EA5D9;
+  color: #fff;
+  border-radius: 50px;
+  width: 48px;
+  height: 48px;
+}
+
+.counts .count-box span {
+  font-size: 36px;
+  display: block;
+  font-weight: 600;
+  color: #082744;
+}
