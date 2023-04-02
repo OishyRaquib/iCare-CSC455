@@ -1,0 +1,447 @@
+
+*{
+    padding: 0;
+    margin:0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+}
+
+
+.about{
+    display: block;
+    color: black;
+    line-height: 15px;
+    width: 95%;
+    background-color:white;
+    border-radius: 20px;
+    min-height: 150px;
+    padding: 20px;
+    margin:20px ;
+    box-shadow: 0 2px 4px 0  black;
+
+    background-image: url(images/vecteezy_illustration-vector-graphic-of-male-doctor-examining-his_10560814-removebg-preview.png);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 230px;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: -120px;
+   
+}
+.about p{
+    margin-top: 1px;
+    line-height: 18px;
+ 
+    word-spacing: 10px;
+
+    
+}
+.about h1{
+    display: inline;
+}
+.name{
+    color: lightsalmon;
+    display: inline;
+}
+
+.iqzzy{
+    width: 300px;
+    position: absolute;
+    left: 600px;
+  
+    
+   
+}
+
+
+
+
+.container{
+    display: flex;
+     
+    justify-content:left;
+   
+  
+}
+
+.card{
+    background: #fff;
+    width: 200px;
+    height: 110px;
+    margin: 15px;
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 0 2px 4px 0  black;
+  
+}
+
+.container h1{
+    font-size: 20px;
+}
+
+.card:hover{
+    background-color:#2A4494;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease ;
+
+}
+
+.dash{
+    display: flex;
+    justify-content:space-between;
+    
+}
+.imp{
+    width: 75%;
+    
+    
+}
+
+.second{
+    background-color:#2A4494 ;
+    width: 30%;
+    margin-left: 20px;
+    align-items: center;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px 0  black;
+}
+
+.iq{
+    display: block;
+    width: 100px;
+ 
+   background-color: #fff;
+   margin-left: 120px;
+   margin-top: 30px;
+   border-radius: 30px;
+
+}
+.c{
+    color: white;
+    margin-left: 115px;
+    margin-top: -5px;
+    font-size: 15px;
+}
+
+.c1{
+    color: white;
+    margin-left: 145px;
+    margin-top: -2px;
+    font-size: 15px;
+}
+
+.con{
+    display: flex;
+     
+  justify-content: center;
+  
+}
+
+.car{
+    color: white;
+    background-color: aqua;
+
+    background-color: rgba(0, 0, 0, .25);
+    width: 70px;
+    height: 85px;
+    margin: 15px;
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 0 2px 4px 0  black;
+   text-align: center;
+  
+}
+
+
+.line{
+
+   
+  
+    position: relative;
+    max-width: 100%;
+    margin: 50px auto;
+    
+}
+
+.t{
+    padding: 10px 50px;
+    position: relative;
+    width: 100%;
+    margin-top: -30px;
+   
+}
+
+.b{
+    padding: 20px 30px;
+    background-color:#2A4494;
+    position: relative;
+   
+    color: #fff;
+    font-size: 15px;
+    line-height: 15px;
+  
+    
+}
+
+.l{
+   left: 0;
+}
+
+.r{
+    left: 50%;
+}
+
+.l span{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: white;
+    float: left;
+    top: 35px;
+    left: 40px;
+    color:#fff;
+   
+    
+    z-index: 10;
+    
+   
+}
+
+.t::after{
+
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    left: 0;
+    margin-left: 45px;
+   
+
+}
+
+.med{
+    color: white;
+    margin-left: 45px;
+    margin-top: 35px;
+    font-size: 15px;
+}
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+.table-title{
+    margin: 20px;
+    color: rgba(137, 64, 197, 0.589);
+}
+
+
+.contents{
+    border-collapse: collapse;
+    margin: 27px;
+    min-width: 500px;
+    border-radius: 20px ;
+    overflow: hidden;
+}
+.contents:hover{
+    box-shadow: 5px 5px 20px #aca9a9;
+}
+
+.contents thead tr{
+    font-size: 18px;
+    background-color: #2A4494;
+    color: white;
+    text-align: left;
+}
+
+.contents th, .contents td{
+    padding: 15px 22px;
+   
+}
+
+td img{
+    width: 50px;
+    height: 50px;
+    margin-right: .1rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    vertical-align: middle;
+
+}
+
+.contents td:hover{
+    cursor: pointer;
+    color:rgb(223, 60, 60);
+}
+
+.contents tbody tr{
+    border-bottom: 1px solid rgb(230, 223, 223) ;
+}
+
+.contents tbody tr:nth-of-type(even){
+    background-color: #2A4494;
+}
+.v{
+    width: 30px;
+    height: 30px;
+    margin-right: .8rem;
+    object-fit: cover;
+    object-position: center;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.lm{
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 10px;
+}
+.q{
+    color: red;
+}
+
+.temp{
+    color:lightblue;
+}
+
+.fac p{
+    font-size: 10px;
+    word-spacing: 3px;
+    margin-top: 5px;
+  
+}
+.fac h2{
+    font-size: 20px;
+    margin-top: 5px;
+  
+}
+.fac{
+    margin-left:8px ;
+
+}
+
+.us p{
+    margin-top: 3px;
+    font-size: 10px;
+}
+.us h1{
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #4EA5D9;
+  }
+  
+  a {
+    color: #2A4494;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #44CFCB;
+    /* text-decoration: underline; */
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Raleway", sans-serif;
+  }
+  
+  #header {
+    background: #fff;
+  }
+  
+  
+  #header .logo {
+    font-size: 30px;
+    padding-left: 10px;
+    padding-top: 20px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    margin-top: -10px;
+    margin-left: 12px;
+  }
+  
+  #header .logo a {
+    color: #4EA5D9;
+    text-decoration: none;
+  }
+  
+  
+  
+  .appointment-btn {
+    margin-left: 10px;
+    padding: 10px;
+    background: #2A4494;
+    color: #fff;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+  }
+  
+  .appointment-btn:hover {
+    background-color: #4EA5D9;
+    color: #fff;
+  }
+  .navbar ul {
+    margin: 0;
+    padding-left: 100px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-top: 7px;
+  }
+  
+  .navbar li {
+    position: relative;
+    padding-right: 10px;
+  }
+
+  
+  @media(max-width:1000px)
+  {
+    .dash{
+        display: flex;
+        justify-content:space-between;
+        flex-direction: column;
+        
+    }
+
+  }
+  

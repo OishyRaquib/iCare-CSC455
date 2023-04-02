@@ -1,0 +1,96 @@
+
+
+.d{
+    color: #4EA5D9;;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 30px;
+    
+}
+
+.list{
+    display: flex;
+     flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.department{
+    color: white;
+    background-color: aqua;
+
+    background-color: white;
+    border: 2px solid lightgray ;
+    width: 240px;
+    height: 290px;
+    margin: 15px;
+   
+    padding: 5px;
+  
+   text-align: left;
+  
+}
+
+.pic{
+    width: 99%;
+    background-color: #2A4494;
+    margin: 2px,2px;
+    height: 70px;
+    color: #44CFCB;
+    font-size: 20px;
+}
+
+
+
+.cardimage{
+
+    background-color: aquamarine;
+    height: 110px;
+   
+    background-size: cover;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+
+   
+}
+ 
+
+.p3{
+    background-image: url(images/blood-pressure-g9857df7d5_1920.jpg );
+}
+.o{
+    padding-top: 30px;
+    font-weight: bold;
+}
+
+.contant{
+    background-color: #2A4494;
+    color: white;
+    font-size: 10px;
+    line-height: 15px;
+    padding: 10px 10px;
+  
+
+}
+
+.info p{
+    color:black;
+    font-size: 10px;
+    padding: 7px 3px;
+}
+
+.contant a{
+    color: white;
+    align-items: end;
+    height: 10px;
+    padding-left: 135px;
+}
+
+.p2{
+    background-image: url(images/brain-g62b1ce603_1920.jpg );
+}
+
+.p1{
+    background-image: url(images/Hematology.jpg );
+}
