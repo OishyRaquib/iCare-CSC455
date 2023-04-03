@@ -44,7 +44,7 @@
 
 .cardimage{
 
-    background-color: aquamarine;
+   
     height: 110px;
    
     background-size: cover;
@@ -57,7 +57,7 @@
  
 
 .p3{
-    background-image: url(images/blood-pressure-g9857df7d5_1920.jpg );
+    background-image: url( /assets/images/blood-pressure-g9857df7d5_1920.jpg);
 }
 .o{
     padding-top: 30px;
@@ -88,9 +88,9 @@
 }
 
 .p2{
-    background-image: url(images/brain-g62b1ce603_1920.jpg );
+    background-image: url(assets/images/brain-g62b1ce603_1920.jpg);
 }
 
 .p1{
-    background-image: url(images/Hematology.jpg );
+    background-image: url(images/Hematology.jpg);
 }

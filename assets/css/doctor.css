@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section, .card-container{
+    background-color: rgba(172, 155, 155, 0.548);
+}
+
+.card-container{
+    margin-top: 100px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.card{
+    width: 350px;
+    border-radius: 20px;
+    background-color: white;
+    margin: 20px 10px;
+}
+
+.card-image{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    background-color: white;
+    padding: 5px;
+}
+.card-image .image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #3D85A1;
+}
+
+.card-image, .card-contents{
+    margin: 20px 0;
+}
+
+.image-contents{
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #3D85A1;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.image-contents, .card-contents{
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.doctor-name{
+    font-size: 25px;
+    color: rgb(56, 53, 53);
+}
+
+.info{
+    padding: 10px;
+    height: 210px;
+    font-size: 18px;
+    color: rgb(56, 53, 53);
+    text-align: center;
+}
+
+.main-btn{
+    border: none;
+    font-size: 18px;
+    color: white;
+    padding: 7px 14px;
+    background-color: rgb(61, 133, 161);
+    border-radius: 6px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.main-btn:hover{
+    background-color: rgb(137, 178, 224);
+}
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #4EA5D9;
+  }
+  
+  a {
+    color: #2A4494;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #44CFCB;
+    /* text-decoration: underline; */
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Raleway", sans-serif;
+  }
+  
+  #header {
+    background: #fff;
+  }
+  
+  
+  #header .logo {
+    font-size: 30px;
+    padding-left: 10px;
+    padding-top: 20px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    margin-top: -10px;
+   
+    margin-left: 12px;
+  }
+  
+  #header .logo a {
+    color: #4EA5D9;
+    text-decoration: none;
+  }
+  
+  
+  
+  .appointment-btn {
+    margin-left: 10px;
+    padding: 10px;
+    background: #2A4494;
+    color: #fff;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+  }
+  
+  .appointment-btn:hover {
+    background-color: #4EA5D9;
+    color: #fff;
+  }
+
+  .navbar{
+    margin-left: 100px;
+  }
+  .navbar ul {
+    margin: 0;
+    padding-left: 100px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-top: -30px;
+  }
+  
+  .navbar li {
+    position: relative;
+    padding-right: 10px;
+  }
+
