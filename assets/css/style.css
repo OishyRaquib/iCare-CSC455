@@ -138,6 +138,9 @@ h6 {
   align-items: center;
   justify-content: center;
 }
+.card-img-top{
+  height:50%;
+}
 .card:hover{
   box-shadow: 1px 1px 10px rgba(0,0,0,.3);
   cursor: pointer;
@@ -281,6 +284,22 @@ h4 {
     font-size: 18px;
 }
 /*End doctors*/
+
+/* Department  */
+#img-slide{
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 600px;
+  /* width:60% */
+}
+#backg{
+  opacity: 65%;
+  /* background-color: #4EA5D9; */
+  color: #224870;
+}
+
+/* Department End*/
+
 
 
 /* Contact Us */
