@@ -1,0 +1,103 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #4EA5D9;
+}
+  
+  a {
+    color: #2A4494;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #44CFCB;
+    /* text-decoration: underline; */
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Raleway", sans-serif;
+  }
+  
+  #header {
+    background: #fff;
+  }
+  
+  
+  #header .logo {
+    font-size: 30px;
+    padding-left: 10px;
+    padding-top: 20px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  #header .logo a {
+    color: #4EA5D9;
+    text-decoration: none;
+  }
+  
+  
+  .navbar ul {
+    margin: 0;
+    padding-left: 400px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .navbar li {
+    position: relative;
+    padding-right: 10px;
+  }
+
+  /*  Profile */
+  body{
+    margin-top:20px;
+}
+
+.border-0 {
+    border: 0!important;
+}
+.card {
+    /* min-width: 80%; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* min-width: 0; */
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+#img-port{
+    padding-left: 80px;
+    height: 400px;
+    width: 70%;
+}
+h3{
+    color: #224870;
+}
+.card:hover{
+    box-shadow: 1px 1px 10px rgba(0,0,0,.3);
+    cursor: pointer;
+  }
+section {
+    padding: 120px 0;
+    overflow: hidden;
+    background: #fff;
+}
+.mb-2-3, .my-2-3 {
+    margin-bottom: 2.3rem;
+}
+#btn{
+    width: 80px;
+    border-color: white;
+    background-color: #4EA5D9;
+}

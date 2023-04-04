@@ -1,10 +1,9 @@
 body {
     font-family: "Open Sans", sans-serif;
-  
+    color: #4EA5D9;
 }
   
-  
-  
+
   h1,
   h2,
   h3,
@@ -48,46 +47,16 @@ body {
     padding-right: 10px;
   }
 
-#apt_con{
-  
-  padding-top: 25px;
-  padding-left: 20x;
-  margin-bottom: 30px;
-  border-radius: 30px;
-
+  #btn{
+    width: 150px;
+    border-color: white;
+    color: white;
+    background-color: #4EA5D9;
 }
-#apt_text{
-  color: #2A4494;
-  padding-top: 100px;
-  padding-left: 100px;
-  padding-bottom: 5px;
+h5{
+    color: #2A4494;
 }
-.card{
-  
-  padding-left: 10px;
-  padding: 10px;
-  margin: 5px;
-  height: 300px;
-  width:20rem;
-  
-}
-.card:hover{
-  box-shadow: 1px 1px 10px rgba(0,0,0,.3);
-  cursor: pointer;
-}
-.card-body{
-  background-color: #224870;
-  color: #fff;
-  
-}
-.card-body a{
-  color: #fff;
-  text-decoration: none;
-}
-.card-body a:hover{
-  color:#ABD5ED;
-}
-.card-title{
-  color:#ABD5ED;
- 
-}
+#aa{
+    color: #fff;
+    text-decoration: none;
+  }

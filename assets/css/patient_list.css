@@ -38,7 +38,7 @@ body {
   
   .navbar ul {
     margin: 0;
-    padding-left: 40%;
+    padding-left: 400px;
     display: flex;
     list-style: none;
     align-items: center;
