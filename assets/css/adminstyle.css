@@ -85,7 +85,9 @@ tbody tr:nth-child(odd) {
     background-color: #ddd;
 }
 #logout {
-    padding-left: 500px;
+    
+        position:absolute;
+        right: 35px;
 }
 
 button {
@@ -99,3 +101,4 @@ button {
 button:hover {
     background-color: #4EA5D9;
 }
+
