@@ -9,7 +9,7 @@ section, .card-container{
 }
 
 .card-container{
-    margin-top: 100px;
+    margin-top: 170px;
     min-height: 100vh;
     display: flex;
     align-items: center;
