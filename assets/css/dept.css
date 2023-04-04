@@ -22,19 +22,20 @@
     background-color: white;
     border: 2px solid lightgray ;
     width: 240px;
-    height: 290px;
-    margin: 15px;
+    height: 385px;
+    margin: 25px;
    
-    padding: 5px;
+    padding: 6px;
   
    text-align: left;
   
 }
 
 .pic{
+    position: relative;
     width: 99%;
     background-color: #2A4494;
-    margin: 2px,2px;
+  
     height: 70px;
     color: #44CFCB;
     font-size: 20px;
@@ -44,8 +45,9 @@
 
 .cardimage{
 
-   
-    height: 110px;
+   margin-top: 1px;
+   margin-bottom:15px;
+    height: 130px;
    
     background-size: cover;
     color: white;
@@ -57,7 +59,7 @@
  
 
 .p3{
-    background-image: url( /assets/images/blood-pressure-g9857df7d5_1920.jpg);
+    background-image: url( ../images/blood-pressure-g9857df7d5_1920.jpg);
 }
 .o{
     padding-top: 30px;
@@ -70,27 +72,39 @@
     font-size: 10px;
     line-height: 15px;
     padding: 10px 10px;
+    margin-top: -15px;
   
 
+}
+.info{
+    margin-top: 10px;
+    margin-bottom: 25px;
 }
 
 .info p{
     color:black;
     font-size: 10px;
-    padding: 7px 3px;
+    padding: 5px 5px;
+   
+  
+}
+hr{
+    color: #000;
 }
 
 .contant a{
     color: white;
     align-items: end;
-    height: 10px;
+    margin-top: 2px;
     padding-left: 135px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .p2{
-    background-image: url(assets/images/brain-g62b1ce603_1920.jpg);
+    background-image: url(../images/brain-g62b1ce603_1920.jpg);
 }
 
 .p1{
-    background-image: url(images/Hematology.jpg);
+    background-image: url(../images/Hematology.jpg);
 }

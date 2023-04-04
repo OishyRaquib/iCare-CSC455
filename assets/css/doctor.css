@@ -5,7 +5,7 @@
 }
 
 section, .card-container{
-    background-color: rgba(172, 155, 155, 0.548);
+    background-color: white;
 }
 
 .card-container{
@@ -23,6 +23,7 @@ section, .card-container{
     border-radius: 20px;
     background-color: white;
     margin: 20px 10px;
+    padding: 0px;
 }
 
 .card-image{
@@ -51,10 +52,11 @@ section, .card-container{
 
 .overlay{
     position: absolute;
-    left: 0;
+    
+    left: 50;
     top: 0;
     height: 100%;
-    width: 100%;
+    width: 350px;
     background-color: #3D85A1;
     border-radius: 15px 15px 15px 15px;
 }
@@ -73,11 +75,12 @@ section, .card-container{
 }
 
 .info{
-    padding: 10px;
-    height: 210px;
-    font-size: 18px;
+    padding: 5px;
+    height: 150px;
+    font-size: 15px;
     color: rgb(56, 53, 53);
     text-align: center;
+    
 }
 
 .main-btn{
@@ -112,71 +115,4 @@ body {
     /* text-decoration: underline; */
   }
   
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Raleway", sans-serif;
-  }
   
-  #header {
-    background: #fff;
-  }
-  
-  
-  #header .logo {
-    font-size: 30px;
-    padding-left: 10px;
-    padding-top: 20px;
-    line-height: 1;
-    font-weight: 700;
-    letter-spacing: 0.8px;
-    font-family: "Poppins", sans-serif;
-    position: relative;
-    margin-top: -10px;
-   
-    margin-left: 12px;
-  }
-  
-  #header .logo a {
-    color: #4EA5D9;
-    text-decoration: none;
-  }
-  
-  
-  
-  .appointment-btn {
-    margin-left: 10px;
-    padding: 10px;
-    background: #2A4494;
-    color: #fff;
-    border-radius: 15px;
-    text-decoration: none;
-    font-size: 14px;
-    display: inline-block;
-  }
-  
-  .appointment-btn:hover {
-    background-color: #4EA5D9;
-    color: #fff;
-  }
-
-  .navbar{
-    margin-left: 100px;
-  }
-  .navbar ul {
-    margin: 0;
-    padding-left: 100px;
-    display: flex;
-    list-style: none;
-    align-items: center;
-    margin-top: -30px;
-  }
-  
-  .navbar li {
-    position: relative;
-    padding-right: 10px;
-  }
-
