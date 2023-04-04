@@ -1,0 +1,117 @@
+body {
+    font-family: "Open Sans", sans-serif;
+  
+}
+  
+  
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Raleway", sans-serif;
+  }
+  
+  #header {
+    background: #fff;
+  }
+  
+  
+  #header .logo {
+    font-size: 30px;
+    padding-left: 1%;
+    padding-top: 1%;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  #header .logo a {
+    /* padding-left: 5%; */
+    color: #4EA5D9;
+    text-decoration: none;
+  }
+  
+  
+  .navbar ul {
+    margin: 0;
+    padding-left: 40%;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .navbar li {
+    position: relative;
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }
+
+
+
+
+
+
+.contents{
+
+    margin:auto;
+    width: 90%;
+    min-height: 70%;
+    /* padding-left: 20px; */
+    border-collapse: collapse;
+    /* margin: 27px; */
+    min-width: 500px;
+    border-radius: 10px ;
+    overflow: hidden;
+    color: #2A4494;
+}
+.contents:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,.3);
+}
+
+.contents thead tr{
+    
+    font-size: 18px;
+    background-color: #224870;
+    color: white;
+    text-align: left;
+}
+
+.contents th, .contents td{
+    padding: 15px 22px;
+   
+}
+.but{
+    color: #2A4494;
+    text-decoration: none;
+}
+.but:hover{
+    color: #4EA5D9;
+}
+/* 
+td img{
+    width: 50px;
+    height: 50px;
+    margin-right: .1rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    vertical-align: middle;
+
+} */
+
+.contents td:hover{
+    cursor: pointer;
+    /* color:rgb(223, 60, 60); */
+}
+
+.contents tbody tr{
+    border-bottom: 1px solid rgb(230, 223, 223) ;
+}
+
+/* .contents tbody tr:nth-of-type(even){
+    background-color: #2A4494;
+} */

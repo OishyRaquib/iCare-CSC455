@@ -1,10 +1,10 @@
 body {
   font-family: "Open Sans", sans-serif;
-  color: #4EA5D9;
+  /* color: #fff; */
 }
 
 a {
-  color: #2A4494;
+  /* color: #fff; */
   text-decoration: none;
 }
 
@@ -56,7 +56,7 @@ h6 {
 }
 
 .appointment-btn:hover {
-  background-color: #4EA5D9;
+  background-color:#3291e6;
   color: #fff;
 }
 .navbar ul {
@@ -73,6 +73,19 @@ h6 {
 }
 
 /* Image display*/
+#card-hero{
+  padding-top: 50px;
+  position: relative;
+  width:70%;
+  height:50%;
+  opacity: 70%;
+
+  /* padding:10px; */
+  /* margin-left: 10px; */
+  align-items: center;
+  justify-content: center;
+}
+
 #hero {
   width: 100%;
   height: 100vh;
@@ -80,14 +93,15 @@ h6 {
   background-size: cover;
 }
 
-#hero .container {
+/* #hero .card {
   position: relative;
-}
+} */
 
 #hero h1 {
   margin: 10px;
-  padding-top: 5px;
+  padding-top: 150px;
   padding-left: 5px;
+  padding-bottom: 5px;
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
@@ -97,10 +111,11 @@ h6 {
 
 #hero h2 {
   color: #2A4494;
-  padding-left: 400px;
+  padding-left: 300px;
+  padding-bottom: 5px;
   font-size: 24px;
 }
-
+/* 
 #hero .btn-get-started {
   font-weight: 500;
   font-size: 14px;
@@ -116,10 +131,10 @@ h6 {
 
 #hero .btn-get-started:hover {
   background: #3291e6;
-}
+} */
 .card{
-  padding:20px;
-  margin-left: 20px;
+  padding:10px;
+  margin-left: 10px;
   align-items: center;
   justify-content: center;
 }
@@ -171,6 +186,103 @@ h6 {
   color: #082744;
 }
 
+/* Appointment */
+/* #appointment{
+  background-color: #f2f2f2;
+} */
+
+/*   gallery  */
+#gal-title{
+  color: #224870;
+}
+.gallery{
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.gallery .gallery-item {
+  overflow: hidden;
+  height: 420px;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+
+.gallery .gallery-item img {
+  transition: all ease-in-out 0.4s;
+}
+
+.gallery .gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Doctors*/
+
+.doctor-title{
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 60px;
+}
+/* body{
+    background:#DCDCDC;
+    margin-top:20px;
+} */
+.card-box {
+    padding: 20px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+
+.social-links li a {
+    border-radius: 50%;
+    color: rgba(121, 121, 121, .8);
+    display: inline-block;
+    height: 30px;
+    line-height: 27px;
+    border: 2px solid rgba(121, 121, 121, .5);
+    text-align: center;
+    width: 30px
+}
+
+.social-links li a:hover {
+    color: #797979;
+    border: 2px solid #797979
+}
+.thumb-lg {
+    height: 70%;
+    width: 70%;
+    padding-left: 100px;
+    padding-bottom: 20px;
+}
+.thumb-lg:hover{
+  transform: scale(1.1);
+}
+
+.img-thumbnail {
+    padding: .75rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .2doct5rem;
+    margin: auto;
+    /* width: 150%;
+    height: 70%; */
+}
+.text-pink {
+    color: #ff679b!important;
+}
+.btn-rounded {
+    border-radius: 2em;
+}
+
+.text-muted {
+    color: #98a6ad!important;
+}
+h4 {
+    line-height: 22px;
+    font-size: 18px;
+}
+/*End doctors*/
+
+
 /* Contact Us */
 #message{
   color: #2A4494;
@@ -182,4 +294,13 @@ h6 {
   background-color: #3291e6;
   color: #ffff;
 
+}
+
+/* Footer */
+.foot{
+  color:#082744;
+  text-decoration: none;
+}
+.foot:hover{
+  color: #3291e6;
 }
