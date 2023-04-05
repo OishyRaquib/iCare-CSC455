@@ -1,0 +1,80 @@
+.contents{
+  
+
+    margin:auto;
+    width: 90%;
+    min-height: 70%;
+    /* padding-left: 20px; */
+    border-collapse: collapse;
+    /* margin: 27px; */
+    min-width: 500px;
+    border-radius: 10px ;
+    overflow: hidden;
+    color: #2A4494;
+}
+.contents:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,.3);
+}
+
+.contents thead tr{
+    
+    font-size: 18px;
+    background-color: #224870;
+    color: white;
+    text-align: left;
+}
+
+.contents th, .contents td{
+    padding: 15px 22px;
+   
+}
+.but{
+    color: #2A4494;
+    text-decoration: none;
+}
+.but:hover{
+    color: #4EA5D9;
+}
+/* 
+td img{
+    width: 50px;
+    height: 50px;
+    margin-right: .1rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    vertical-align: middle;
+
+} */
+
+.contents td:hover{
+    cursor: pointer;
+    /* color:rgb(223, 60, 60); */
+}
+
+.contents tbody tr{
+    border-bottom: 1px solid rgb(230, 223, 223) ;
+}
+
+/* .contents tbody tr:nth-of-type(even){
+    background-color: #2A4494;
+} */
+
+.app{
+    border-radius: 9px;
+    height: 35px;
+    width: 200px;
+    position:absolute;
+    margin-left: 950px;
+    margin-top: 50px;
+    background-color: #2A4494;
+    color: white;
+    padding: 5px;
+
+    text-align: center;
+}
+
+.app:hover{
+    background-color: #2196F3;
+    color: #eee;
+}
