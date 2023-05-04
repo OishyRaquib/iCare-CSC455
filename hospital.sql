@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2023 at 01:29 PM
+-- Generation Time: May 05, 2023 at 01:34 AM
 -- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- PHP Version: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -160,7 +160,48 @@ INSERT INTO `patient_details` (`pat_name`, `pat_age`, `pat_phone`, `pat_pass`, `
 ('emma', 20, '1234', '1234', 'Female', 'emma@gmail.com'),
 ('John', 15, '4444', '4444', 'Male', 'john@gmail'),
 ('jannat', 21, '2222', '2222', 'Female', 'iqra36687@gmail.com'),
-('Emma shelton', 12, '666', '666', 'Female', 'shelton@gmail');
+('Emma shelton', 12, '666', '666', 'Female', 'shelton@gmail'),
+('', 0, '', '', '', ''),
+('', 0, '', '', '', ''),
+('', 0, '', '', '', ''),
+('', 0, '', '', '', ''),
+('', 0, '', '', '', ''),
+('', 0, '', '', '', ''),
+('', 0, '', '', '', ''),
+('', 0, '', '', '', ''),
+('', 0, '', '', '', ''),
+('', 0, '', '', '', ''),
+('', 0, '', '', '', ''),
+('', 0, '', '', '', ''),
+('', 0, '', '', '', ''),
+('', 0, '', '', '', ''),
+('', 0, '', '', '', ''),
+('', 0, '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `prescription`
+--
+
+CREATE TABLE `prescription` (
+  `p_name` varchar(50) NOT NULL,
+  `p_date` date NOT NULL DEFAULT current_timestamp(),
+  `p_treat_details` varchar(500) NOT NULL,
+  `p_meds` varchar(500) NOT NULL,
+  `p_inst` varchar(500) NOT NULL,
+  `p_docphone` varchar(11) NOT NULL,
+  `p_patphone` varchar(11) NOT NULL,
+  `d_name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `prescription`
+--
+
+INSERT INTO `prescription` (`p_name`, `p_date`, `p_treat_details`, `p_meds`, `p_inst`, `p_docphone`, `p_patphone`, `d_name`) VALUES
+('jannat', '2023-05-03', 'medications to control heart rate and rhythm, as well as blood thinners to prevent blood clots and reduce the risk of stroke', 'antiarrhythmics', 'reduce caffeine and alcohol intake, quitting smoking', '999', '  2222  ', 'Oishy Raquib'),
+('jannat', '2023-05-03', 'new treat', 'new med', 'new instruction', '999', '  2222  ', 'Oishy Raquib');
 
 -- --------------------------------------------------------
 
