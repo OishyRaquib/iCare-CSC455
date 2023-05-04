@@ -49,13 +49,13 @@ $res=mysqli_query($link,"SELECT* FROM appointment_details where app_doc_phone='$
     <div class="container">
 
       
-      <h1 class="logo me-auto"><a href="doctor_dashboard.html">iCare</a></h1>
+      <h1 class="logo me-auto"><a href="doc_dashboard.php?user_phone=<?php echo urlencode($phone); ?>">iCare</a></h1>
        <!-- navbar-->
       <nav id="navbar" class="navbar navbar-light">
         <ul>
-          <li><a class="nav-link scrollto" href="doctor_dashboard.php?user_phone=<?php echo $phone?>">Appointments</a></li>
-        <li><a class="nav-link scrollto" href="patient_list.html">Patients</a></li>
-          <li><a class="nav-link scrollto" href="doc_profile.php?user_phone=<?php echo $phone?>">Profile</a></li>
+          <li><a class="nav-link scrollto" href="doc_dashboard.php?user_phone=<?php echo urlencode($phone); ?>">Appointments</a></li>
+        <li><a class="nav-link scrollto" href="patient_list.php?user_phone=<?php echo urlencode($phone); ?>">Patients</a></li>
+          <li><a class="nav-link scrollto" href="doc_profile.php?user_phone=<?php echo urlencode($phone); ?>">Profile</a></li>
           <li><a class="nav-link scrollto active" href="login.html">Logout</a></li>
           
         </ul>
@@ -83,7 +83,11 @@ $res=mysqli_query($link,"SELECT* FROM appointment_details where app_doc_phone='$
           </ul>
           <div class="card-body">
             <a href="report.html" class="card-link card-body" >View Report</a>
-            <a href="prescription.html" class="card-link card-body" >Prescription</a>
+            <?php 
+                $d_phone=$row['app_doc_phone'];
+                $pat_phone=$row['app_pat_phone'];
+            ?>
+            <a href="prescription.php?pat_phone=<?php echo urlencode($pat_phone);?>&d_phone=<?php echo urlencode($d_phone);?>" class="card-link card-body" >Prescription</a>
           </div>
           
         </div>

@@ -4,26 +4,22 @@
 session_start();
 if(isset($_GET['user_phone'])===true){
     $phone = $_GET['user_phone'];
-
-    
-    
-
 }
 else{
     die("Unable to connect");
 }
-$link=mysqli_connect("localhost","root","","hospital");
-    if($link===false){      
+    $link=mysqli_connect("localhost","root","","hospital");
+    if(!$link){      
         die("Unable to connect".mysqli_connect_error());
     }
 // $phone=$_GET['user_phone'];
-$query="SELECT* FROM doctor_details WHERE doc_phone='$phone'";
-$res=mysqli_query($link,$query);
-$row = mysqli_fetch_assoc($res);
-$name = $row['doc_name'];
-$dept = $row['doc_dept'];
-$exp = $row['doc_exp'];
-$des = $row['doc_desc'];
+    $query="SELECT* FROM doctor_details WHERE doc_phone='$phone'";
+    $res=mysqli_query($link,$query);
+    $row = mysqli_fetch_assoc($res);
+    $name = $row['doc_name'];
+    $dept = $row['doc_dept'];
+    $exp = $row['doc_exp'];
+    $des = $row['doc_desc'];
 
 // $_SESSION['user_phone']=$phone;
 
@@ -51,14 +47,13 @@ $des = $row['doc_desc'];
     <div class="container">
 
       
-      <h1 class="logo me-auto"><a href="doctor_dashboard.php?user_phone=<?php echo $phone?>">iCare</a></h1>
+      <h1 class="logo me-auto"><a href="doc_dashboard.php?user_phone=<?php echo urlencode($phone); ?>">iCare</a></h1>
        <!-- navbar-->
       <nav id="navbar" class="navbar navbar-light">
         <ul>
-          <li><a class="nav-link scrollto" href="doctor_dashboard.html">Appointments</a></li>
-        <li><a class="nav-link scrollto" href="patient_list.html">Patients</a></li>
-          <li><a class="nav-link scrollto" href="doc_profile.php?user_phone=
-          <?php echo $phone?>">Profile</a></li>
+          <li><a class="nav-link scrollto" href="doc_dashboard.php?user_phone=<?php echo urlencode($phone); ?>">Appointments</a></li>
+        <li><a class="nav-link scrollto" href="patient_list.php?user_phone=<?php echo urlencode($phone); ?>">Patients</a></li>
+          <li><a class="nav-link scrollto" href="doc_profile.php?user_phone=<?php echo urlencode($phone); ?>">Profile</a></li>
           <li><a class="nav-link scrollto active" href="login.html">Logout</a></li>
           
         </ul>
@@ -80,7 +75,7 @@ $des = $row['doc_desc'];
                             </div>
                             <div class="col-lg-6 px-xl-10">
                                 <div >
-                                    <h3 class="h2 mb-0"><?php echo $name;  ?></h3>
+                                    <h3 class="h2 mb-0">Dr. <?php echo $name;  ?></h3>
                                     
                                 </div>
                                 <ul class="list-unstyled mb-1-9 mt-4">
