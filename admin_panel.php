@@ -1,6 +1,19 @@
+<?php
+session_start();
+require("dbconnection.php");
+$query= " select * from patient_details ";
+$result =mysqli_query($con,$query);
+$query1= " select * from doctor_details ";
+$result1 =mysqli_query($con,$query1);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>#addPatientBtn a {color: white; }</style>
+<style>#addDoctorBtn a {color: white; }</style>
+<style>#editBtn a {color: white; }</style>
+<style>#deleteBtn a {color: white; }</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Admin Dashboard</title>
@@ -63,35 +76,30 @@
             <tbody>
                 <!-- Patient Row 1 -->
                 <tr>
-                    <td>John Doe</td>
-                    <td>32</td>
-                    <td>Male</td>
-                    <td>Male</td>
-                    <td>Male</td>
-                    <td>Male</td>
-                    <td>
-                        <button>Edit</button>
-                        <button>Delete</button>
+                    <?php
+                    while($row= mysqli_fetch_assoc($result))
+                    {
+                   ?>
+                    <td> <?php echo $row['pat_name']; ?></td>
+                    <td> <?php echo $row['pat_age']; ?></td>
+                    <td> <?php echo $row['pat_phone']; ?></td>
+                    <td> <?php echo $row['pat_email']; ?></td>
+                    <td> <?php echo $row['pat_pass']; ?></td>
+                    <td> <?php echo $row['pat_gender']; ?></td>
+                    <td>   
+                    <button id="editBtn"><a href="edit.php?pat_phone=<?php echo $row['pat_phone']; ?>" >Edit</a></button>
+                    <button id="deleteBtn"><a href="delete.php?pat_phone=<?php echo $row['pat_phone']; ?>">Delete</a></button>
+                    
                     </td>
                 </tr>
-                <!-- Patient Row 2 -->
-                <tr>
-                    <td>Jane Smith</td>
-                    <td>28</td>
-                    <td>Female</td>
-                    <td>Male</td>
-                    <td>Male</td>
-                    <td>Male</td>
-                    <td>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
+                    <?php   
+                    }
+                    ?>
             </tbody>
         </table>
 
         <!-- Add Patient Button -->
-        <button id="addPatientBtn">Add Patient</button>
+        <button id="addPatientBtn"> <a href="admin_pat.php">Add Patient</a> </button>
     </section>
 
     <!-- Doctors Section -->
@@ -115,48 +123,30 @@
             <tbody>
                 <!-- Doctor Row 1 -->
                 <tr>
-                    <td>Dr. Alice Johnson</td>
-                    <td>Cardiologist</td>
-                    <td>(555) 123-4567</td>
-                    <td>Dr. Alice Johnson</td>
-                    <td>Cardiologist</td>
-                    <td>(555) 123-4567</td>
+                    <?php
+                    while($row= mysqli_fetch_assoc($result1))
+                    {
+                   ?>
+                    <td> <?php echo $row['doc_name']; ?></td>
+                    <td> <?php echo $row['doc_phone']; ?></td>
+                    <td> <?php echo $row['doc_exp']; ?></td>
+                    <td> <?php echo $row['doc_dept']; ?></td>
+                    <td> <?php echo $row['doc_pass']; ?></td>
+                    <td> <?php echo $row['doc_desc']; ?></td>
                     <td>
-                        <button>Edit</button>
-                        <button>Delete</button>
+                        <button id="editBtn"><a href=" ">Edit</a></button>
+                        <button id="deleteBtn"><a href="delete.php?doc_phone=<?php echo $row['doc_phone']; ?>">Delete</a></button>
                     </td>
                 </tr>
-                <!-- Doctor Row 2 -->
-                <tr>
-                    <td>Dr. Bob Brown</td>
-                    <td>Neurologist</td>
-                    <td>(555) 234-5678</td>
-                    <td>Dr. Alice Johnson</td>
-                    <td>Cardiologist</td>
-                    <td>(555) 123-4567</td>
-                    <td>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
-                <!-- Doctor Row 3 -->
-                <tr>
-                    <td>Dr. Carol Williams</td>
-                    <td>Orthopedic Surgeon</td>
-                    <td>(555) 345-6789</td>
-                    <td>Dr. Alice Johnson</td>
-                    <td>Cardiologist</td>
-                    <td>(555) 123-4567</td>
-                    <td>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
+                    <?php   
+                    }
+                    ?>
             </tbody>
         </table>
 
+
         <!-- Add Doctor Button -->
-        <button id="addDoctorBtn">Add Doctor</button>
+        <button id="addDoctorBtn"><a href="admin_doc.php">Add Doctor</a> </button>
     </section>
 
     <!-- Appointments Section -->
