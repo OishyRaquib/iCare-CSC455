@@ -56,7 +56,7 @@ $res=mysqli_query($link,"SELECT* FROM appointment_details where app_doc_phone='$
           <li><a class="nav-link scrollto" href="doc_dashboard.php?user_phone=<?php echo urlencode($phone); ?>">Appointments</a></li>
         <li><a class="nav-link scrollto" href="patient_list.php?user_phone=<?php echo urlencode($phone); ?>">Patients</a></li>
           <li><a class="nav-link scrollto" href="doc_profile.php?user_phone=<?php echo urlencode($phone); ?>">Profile</a></li>
-          <li><a class="nav-link scrollto active" href="login.html">Logout</a></li>
+          <li><a class="nav-link scrollto active" href="register.php">Logout</a></li>
           
         </ul>
       </nav><!-- .navbar -->
@@ -65,7 +65,7 @@ $res=mysqli_query($link,"SELECT* FROM appointment_details where app_doc_phone='$
 
     <!--Contents-->
     
-    <h5 class="mt-5" id="apt_text">Appointments Today</h5>
+    <h5 class="mt-5" id="apt_text">Upcoming Appointments</h5>
     <section class=" container" id="apt_con">
     <div class="row">
     <?php while($row=mysqli_fetch_assoc($res)){ ?>
@@ -82,11 +82,12 @@ $res=mysqli_query($link,"SELECT* FROM appointment_details where app_doc_phone='$
             <!-- <li class="list-group-item">A third item</li> -->
           </ul>
           <div class="card-body">
-            <a href="report.html" class="card-link card-body" >View Report</a>
-            <?php 
+          <?php 
                 $d_phone=$row['app_doc_phone'];
                 $pat_phone=$row['app_pat_phone'];
             ?>
+            <a href="viewReport.php?pat_phone=<?php echo urlencode($pat_phone);?>&doc_phone=<?php echo urlencode($d_phone);?>" class="card-link card-body" >View Report</a>
+            
             <a href="prescription.php?pat_phone=<?php echo urlencode($pat_phone);?>&d_phone=<?php echo urlencode($d_phone);?>" class="card-link card-body" >Prescription</a>
           </div>
           
