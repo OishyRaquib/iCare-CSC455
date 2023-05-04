@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2023 at 07:00 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: May 04, 2023 at 05:19 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,6 +24,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `appointment_details`
+--
+
+CREATE TABLE `appointment_details` (
+  `app_day` varchar(9) NOT NULL,
+  `app_time` varchar(20) NOT NULL,
+  `app_doc_name` varchar(20) NOT NULL,
+  `app_doc_phone` varchar(10) NOT NULL,
+  `app_doc_dept` varchar(15) NOT NULL,
+  `app_problem` varchar(30) NOT NULL,
+  `app_pat_phone` varchar(15) NOT NULL,
+  `app_pat_name` varchar(20) NOT NULL,
+  `app_date` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `appointment_details`
+--
+
+INSERT INTO `appointment_details` (`app_day`, `app_time`, `app_doc_name`, `app_doc_phone`, `app_doc_dept`, `app_problem`, `app_pat_phone`, `app_pat_name`, `app_date`) VALUES
+('Sunday', '9:30-10:30 AM', 'Oishy Raquib', '999', 'Cardiology', '', '  2222  ', 'jannat', '7/5/23'),
+('Sunday', '12:30-1:00 AM', 'Oishy Raquib', '999', 'Cardiology', '', '  2222  ', 'jannat', '7/5/23'),
+('Sunday', '12:30-1:00 AM', 'James Peteren', '888', 'Neurology', '', '  4444  ', 'John', '7/5/23');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `department`
 --
 
@@ -32,6 +59,15 @@ CREATE TABLE `department` (
   `dep_des` varchar(500) NOT NULL,
   `dep_rev` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `department`
+--
+
+INSERT INTO `department` (`dep_name`, `dep_des`, `dep_rev`) VALUES
+('Cardiology', 'This is the branch of medicine that deals with the study and treatment of diseases of the heart and blood vessels. Cardiologists diagnose and treat conditions such as coronary artery disease, heart failure, valvular heart disease, and arrhythmias.', '8.8'),
+('Hematology', ' Hematology is the study of blood and blood-forming tissues. Hematologists diagnose and treat diseases of the blood, including blood cancers such as leukemia, lymphoma, and multiple myeloma, as well as disorders of the bone marrow and lymphatic system.', '9.3'),
+('Neurology', 'Neurology is the branch of medicine that deals with disorders of the nervous system. Neurologists diagnose and treat conditions such as epilepsy, multiple sclerosis, Parkinson disease, and other forms of dementia.', '7.3');
 
 -- --------------------------------------------------------
 
@@ -44,8 +80,42 @@ CREATE TABLE `doctor_details` (
   `doc_phone` varchar(50) NOT NULL,
   `doc_exp` varchar(50) NOT NULL,
   `doc_dept` varchar(50) NOT NULL,
-  `doc_pass` varchar(50) NOT NULL
+  `doc_pass` varchar(50) NOT NULL,
+  `doc_desc` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `doctor_details`
+--
+
+INSERT INTO `doctor_details` (`doc_name`, `doc_phone`, `doc_exp`, `doc_dept`, `doc_pass`, `doc_desc`) VALUES
+('James Peteren', '888', '10', 'Neurology', '888', 'Lorem ipsum, dolor sit amet consectetur adipisicin'),
+('Oishy Raquib', '999', '10', 'Cardiology', '999', 'Lorem ipsum, dolor sit amet consectetur adipisicin'),
+('Aman ', '666', '10', 'Hematology', '666', 'Lorem ipsum, dolor sit amet consectetur adipisicin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `doctor_schedule`
+--
+
+CREATE TABLE `doctor_schedule` (
+  `day` varchar(9) NOT NULL,
+  `date` varchar(9) NOT NULL,
+  `time` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `doctor_schedule`
+--
+
+INSERT INTO `doctor_schedule` (`day`, `date`, `time`) VALUES
+('Sunday', '7/5/23', '8:00-9:00 AM'),
+('Sunday', '7/5/23', '9:30-10:30 AM'),
+('Sunday', '7/5/23', '12:30-1:00 AM'),
+('Monday', '8/5/23', '8:00-9:00 AM'),
+('Monday', '8/5/23', '9:30-10:30 AM'),
+('Monday', '8/5/23', '12:30-1:00 AM');
 
 -- --------------------------------------------------------
 
@@ -58,8 +128,19 @@ CREATE TABLE `patient_details` (
   `pat_age` int(11) NOT NULL,
   `pat_phone` varchar(50) NOT NULL,
   `pat_pass` varchar(50) NOT NULL,
-  `pat_gender` varchar(50) NOT NULL
+  `pat_gender` varchar(50) NOT NULL,
+  `pat_email` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `patient_details`
+--
+
+INSERT INTO `patient_details` (`pat_name`, `pat_age`, `pat_phone`, `pat_pass`, `pat_gender`, `pat_email`) VALUES
+('emma', 20, '1234', '1234', 'Female', 'emma@gmail.com'),
+('John', 15, '4444', '4444', 'Male', 'john@gmail'),
+('jannat', 21, '2222', '2222', 'Female', 'iqra36687@gmail.com'),
+('Emma shelton', 12, '666', '666', 'Female', 'shelton@gmail');
 
 -- --------------------------------------------------------
 

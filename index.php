@@ -1,3 +1,27 @@
+<?php
+session_start();
+if (isset($_GET['user_phone'])) {
+
+  $phone = $_GET['user_phone'];
+}
+
+else
+ { $phone = $_GET['phone'];}
+  $link=mysqli_connect("localhost","root","","hospital");
+  if($link===false){
+      
+      die("Could not connect".mysqli_connect_error());
+      }
+  
+  
+      $res=mysqli_query($link,"SELECT* FROM patient_details where pat_phone='$phone'");
+      $row = mysqli_fetch_assoc($res);
+      $name = $row['pat_name'];
+      session_start();
+      $_SESSION['user_phone'] = $phone;
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,10 +43,10 @@
          <!-- navbar-->
         <nav id="navbar" class="navbar navbar-light">
           <ul>
-            <li><a class="nav-link scrollto" href="index.html">Dashboard</a></li>
-            <li><a class="nav-link scrollto" href="department.html">Departments</a></li>
+            <li><a class="nav-link scrollto" href="index.php?user_phone=<?php echo $_SESSION['user_phone']; ?>">Dashboard</a></li>
+            <li><a class="nav-link scrollto" href="department.php?user_phone=<?php echo $_SESSION['user_phone']; ?>">Departments</a></li>
             <li><a class="nav-link scrollto" href="reportlist.html">Report</a></li>
-            <li><a class="nav-link scrollto active" href="doctor.html">Doctors</a></li>
+         
             <li><a class="nav-link scrollto active" href="login.html">Sign Out</a></li>
             <li><a href="department.html" class="appointment-btn scrollto"><span class="d-none d-md-inline">Book </span> Appointment</a></li>
 
@@ -40,7 +64,12 @@
           <div class="about">
             <h1>
               Hello,
-              <h1 class="name">Emma Sheltone</h1>
+              <?php
+            
+              echo"<h1 class=name>".$name."</h1>";
+
+             
+              ?>
             </h1>
             <br /><br />
             <p>
@@ -159,8 +188,9 @@
           class="iq"
         />
         <br />
-        <h2 class="c">Emma Shelton</h2>
-        <p class="c1">21 yrs</p>
+        <?php
+        echo"<h2 class='c'>".$name."</h2><p class='c1'>".$row['pat_age'] ."</p>"
+        ?>
         <br />
 
         <section class="con">

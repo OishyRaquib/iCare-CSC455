@@ -126,15 +126,16 @@
 }
 .c{
     color: white;
-    margin-left: 115px;
-    margin-top: -5px;
+    text-align: center;
+    
+ 
     font-size: 15px;
 }
 
 .c1{
+    text-align: center;
     color: white;
-    margin-left: 145px;
-    margin-top: -2px;
+  
     font-size: 15px;
 }
 

@@ -39,41 +39,53 @@
       <div class="col-sm-6 text-black">
         <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
 
-          <form style="width: 23rem;">
+          <form action="register.php" method="POST" style="width: 23rem;">
 
             <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;" id="login">Sign Up</h3>
 
             <div class="form-outline mb-4">
               <label class="form-label" for="form2Example18">Name</label>
-              <input type="text" id="form2Example18" class="form-control form-control-lg" />
+              <input type="text" id="form2Example18" class="form-control form-control-lg" name="name"/>
               
             </div>
 
             <div class="form-outline mb-4">
               <label class="form-label" for="form2Example18">Email Address</label>
-              <input type="text" id="form2Example18" class="form-control form-control-lg" />
+              <input type="text" id="form2Example18" class="form-control form-control-lg" name="email" />
               
             </div>
 
             <div class="form-outline mb-4">
               <label class="form-label" for="form2Example18">Phone</label>
-              <input type="number" id="form2Example18" class="form-control form-control-lg" />
+              <input type="number" id="form2Example18" class="form-control form-control-lg" name="phone" />
+              
+            </div>
+
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form2Example18">Age</label>
+              <input type="number" id="form2Example18" class="form-control form-control-lg" name="age" />
               
             </div>
 
             <div class="form-outline mb-4">
               <label class="form-label" for="form2Example28">Password</label>
-              <input type="password" id="form2Example28" class="form-control form-control-lg" />
-              
-            </div>
-            <div class="form-outline mb-4">
-              <label class="form-label" for="form2Example28">Confirm Password</label>
-              <input type="password" id="form2Example28" class="form-control form-control-lg" />
+              <input type="password" id="form2Example28" class="form-control form-control-lg" name="pass"/>
               
             </div>
 
+            <div class="form-outline mb-4">
+            <label class="form-label" for="form2Example28">Gender</label>
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="gender">
+              <option selected>Select gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+
             <div class="pt-1 mb-4">
-              <button class="btn btn-lg btn-block" id="color-btn" type="button">Sign Up</button>
+              <button class="btn btn-lg btn-block" id="color-btn" type="submit">Sign Up</button>
             </div>
 
             <p>Already have an account?<a href="login.html" class="link "id="forgot"> Sign in</a></p>
