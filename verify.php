@@ -36,7 +36,7 @@ $res=mysqli_query($link,"SELECT* FROM doctor_details where doc_phone='$contact' 
 $count=mysqli_num_rows($res);
 if($count==1)
 {
-    $url = "doctor_dashboard.html?phone=" . urlencode($contact);
+    $url = "doc_dashboard.php?phone=" . urlencode($contact);
     header("Location:". $url);
 }
 else{
