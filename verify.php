@@ -46,6 +46,13 @@ else{
 mysqli_close($link);
 }
 
+else if($type=="Admin") {  
+    
+        header('Location: admin_login.php'); 
+    }
+
+
+
 ?>
 
 
