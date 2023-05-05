@@ -1,116 +1,54 @@
-.r{
-    margin-top:5px;
-    margin-left: 90px;
-    width: 79%;
-    background-color: white;
-    border-radius: 2px;
-    border: 2px solid lightblue;
-    font-size: 15px;
-    padding: 5px 5px;
-    box-shadow:0  1px 1px 0  black;
-    color: #2A4494;
-    
+body {
+    font-family: "Open Sans", sans-serif;
+  
 }
-
-.r h1{
-    color: lightblue;
-    font-size: 25px;
-    margin-left: 20px;
-    font-weight: bold;
-   
-}
-.r:hover{
-    box-shadow: 0 4px 2px 0  black;
-}
-
-.med{
-    display:flex;
-    justify-content: center;
-
-}
-
-
-.r1{
-    /* margin-top: 30px; */
-    margin-left: -90px;
-    margin-right: 100px;
-    width: 35%;
-    height: auto;
-    background-color: white;
-    border-radius: 2px;
-    border: 2px solid lightblue;
-    font-size: 15px;
-    padding: 5px 5px;
-    box-shadow:0  1px 1px 0  black;
-    color: #2A4494;
-    
-}
-.r1 h1{
-    color: lightblue;
-    font-size: 25px;
-    margin-left: 20px;
-    font-weight: bold;
-   
-}
-.r1:hover{
-    box-shadow: 0 4px 2px 0  black;
-}
-
-.r2{
-    margin-top: 30px;
-    margin-left: -50px;
-    width: 40%;
-    background-color: white;
-    border-radius: 2px;
-    border: 2px solid lightblue;
-    font-size: 15px;
-    padding: 10px 5px;
-    box-shadow:0  1px 1px 0  black;
-    color: #2A4494;
-    
-}
-
-
-.r2 h1{
-    color: lightblue;
-    font-size: 25px;
-    margin-left: 2px;
-    font-weight: bold;
-   
-}
-.r2:hover{
-    box-shadow: 0 4px 2px 0  black;
-}
-
-
-.r3{
+  
+  
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Raleway", sans-serif;
+  }
+  
+  #header {
+    background: #fff;
+    /* margin-bottom: 500px; */
+  }
+  
+  
+  #header .logo {
+    font-size: 30px;
+    padding-left: 10px;
+    padding-top: 20px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  #header .logo a {
+    color: #4EA5D9;
+    text-decoration: none;
+  }
+ 
+  
+  .navbar ul {
+    margin: 0;
+    padding-left: 400px;
     display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
-    margin-left: 90px;
-    width: 79%;
-    background-color: white;
-    border-radius: 2px;
-    border: 2px solid lightblue;
-    font-size: 20px;
-    padding: 5px 5px;
-    box-shadow:0  1px 1px 0  black;
-    color: #2A4494;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .navbar li {
+    position: relative;
    
-    margin-bottom: 10px;
-    
-}
-
-.r3 h1{
-    color: lightblue;
-    font-size: 25px;
-    margin-left: -180px;
-    font-weight: bold;
-    display: inline;
-   
-}
-.r3 p{
-    display: inline;
-    margin-left: 20px;
-    
-}
+    padding-right: 10px;
+  }
+  .navbar li:a{
+ text-decoration: none;
+  }

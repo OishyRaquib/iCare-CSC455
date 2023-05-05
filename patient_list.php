@@ -82,7 +82,7 @@ $link=mysqli_connect("localhost","root","","hospital");
                 <td><?php echo $row['app_pat_phone']; ?></td>
                 <td><?php echo $row['app_date']; ?></td>
                 <td style="text-transform:capitalize;"><?php echo $row['app_problem']; ?></td>
-                <th><a href="viewReport.php?pat_phone=<?php echo urlencode($row['app_pat_phone']);?>&doc_phone=<?php echo urlencode($row['app_doc_phone']);?>">View Report</a></th>
+                <th><a href="viewReport.php?pat_phone=<?php echo urlencode($row['app_pat_phone']);?>&doc_phone=<?php echo urlencode($row['app_doc_phone']);?>" style="text-decoration:none;">View Report</a></th>
             </tr>
         <?php }?>
             

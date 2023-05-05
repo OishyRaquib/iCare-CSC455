@@ -97,7 +97,6 @@ else{
     </section>
 
         
-    <h5>Hello, <?php echo $phone?></h5>
 
 
 

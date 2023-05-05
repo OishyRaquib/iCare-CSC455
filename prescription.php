@@ -23,7 +23,7 @@
     }
     $row1=mysqli_fetch_assoc($res1);
     $doctor_name=$row1['doc_name'];
-    $doctor_phone=$doc_phone;
+    // $doctor_phone=$doc_phone;
 
     $query2="SELECT* FROM `patient_details` WHERE `pat_phone`= trim('$p_phone')";
     $res2=mysqli_query($link,$query2);
@@ -32,7 +32,7 @@
     }
     $row2 = mysqli_fetch_assoc($res2);
     $name = $row2['pat_name'];
-    $pat_phone=$p_phone;
+    // $pat_phone=$p_phone;
 
 ?>
 
@@ -79,7 +79,7 @@
       <h5  class="mt-5">Prescription Form</h5>
       <form method="POST" action="prescription.php?pat_phone=<?php echo urlencode($p_phone); ?>&d_phone=<?php echo urlencode($doc_phone); ?>">
           <div class="mb-3">
-            <label class="form-label mt-2">Name</label>
+            <label class="form-label mt-2">Patient Name</label>
             <fieldset disabled>
             <input type="text" id="disabledTextInput" class="form-control" style="text-transform:capitalize;"  placeholder="<?php echo $name; ?>"/>
             </fieldset>
@@ -115,12 +115,7 @@
     </div>
   </section>
  
-<script>
-  function submitForm() {
-    document.querySelector('form').submit();
-  }
-</script>
-  <!---->
+
 <?php 
   if(!empty($_POST)){
     // $d_phone=$row1['app_doc_phone'];
