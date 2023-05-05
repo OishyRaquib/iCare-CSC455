@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +20,7 @@
     <div class="container">
 
       
-      <h1 class="logo me-auto"><a href="index.html">iCare</a></h1>
+      <h1 class="logo me-auto"><a href="home.php">iCare</a></h1>
        <!-- navbar-->
       <nav id="navbar" class="navbar navbar-light">
         <ul>
@@ -476,6 +477,7 @@
 
 
   <!--Book Appointment-->
+  
   <section id="appointment" class="mt-5 mb-5">
   <div class="container" id="apt">
     <h5 id="message" class="mt-5">Make an Appointment</h5>
@@ -520,6 +522,10 @@
         
   </div>
 </section>
+<div class="card-box px-5 mx-5" id="backg">
+    <h5>Guidelines</h5>
+    <p>To book an appointment, please sign up or login.</p>
+</div>
 <hr></hr>
   <!--End Book Apppointment-->
 
@@ -539,28 +545,57 @@
           </div>
         </div>
       </div>
+      
       <div class="col">
+      <form method="POST">
         <h5 id="message">Talk To Us</h5>
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label mt-2">Name</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
+          <label for="s_name" class="form-label mt-2">Name</label>
+          <input type="text" class="form-control" name="s_name" placeholder="John Doe"/>
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label mt-2">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">
+          <label for="s_email" class="form-label mt-2">Email address</label>
+          <input type="email" class="form-control" name="s_email" placeholder="name@example.com"/>
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label mt-2">Subject</label>
-          <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Type your subject here...">
+          <label for="s_text" class="form-label mt-2">Subject</label>
+          <input type="text" class="form-control" name="s_text" placeholder="Type your subject here..."/>
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label mt-2">Message</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Type your message here..."></textarea>
+          <label for="s_mess" class="form-label mt-2">Message</label>
+          <textarea class="form-control" name="s_mess" rows="3" placeholder="Type your message here..."></textarea>
         </div>
-        <button type="button" class="btn" id="sendMess">Send Message</button>
+        <input type="submit" class="btn" id="sendMess" name="sendMess" value="Send Message"></input>
+        </form>
       </div>
+      
     </div>
   </div>
+  <?php
+    $connection=mysqli_connect("localhost","root","","hospital");
+    if(!empty($_POST['sendMess'])){
+      $name=$_POST['s_name'];
+      $email=$_POST['s_email'];
+      $subject=$_POST['s_text'];
+      $message=$_POST['s_mess'];
+    
+      
+      if($connection){
+        $query="INSERT INTO `message` (`m_name`,`m_email`,`m_subject`,`m_message`) VALUES ('{$name}','{$email}','{$subject}','{$message}')";
+        $result=mysqli_query($connection,$query);
+        if(!$result){
+          die("Unable to send message".mysqli_error);
+        }
+      }
+      else{
+        //
+      }
+      
+    
+    }
+    mysqli_close($connection);
+  ?>
+
   <!--- End Contact Us -->
 
   <!---Footer--->
