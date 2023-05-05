@@ -52,25 +52,25 @@ $result2 =mysqli_query($con,$query2);
     <section id="dashboard">
         <h1>Dashboard</h1>
         <div class="dashboard-stats">
-            <div>Number of Patients: <span id="numPatients">
+            <div>Number of Patients: <span id="numPatients"><h2>
                 <?php $dash_patient_query= "SELECT * FROM patient_details";
                 $dash_patient_query_run =mysqli_query($con ,$dash_patient_query);
                 if($pat_total=mysqli_num_rows($dash_patient_query_run)){echo $pat_total;}
-                ?>
+                ?></h2>
             </span></div>
 
-            <div>Number of Doctors: <span id="numDoctors">
+            <div>Number of Doctors: <span id="numDoctors"><h2>
                 <?php $dash_doc_query= "SELECT * FROM doctor_details";
                 $dash_doc_query_run =mysqli_query($con ,$dash_doc_query);
                 if($doc_total=mysqli_num_rows($dash_doc_query_run)){echo $doc_total;}
-                ?>
+                ?></h2>
             </span></div>
 
-            <div>Number of Appointments: <span id="numAppointments"> 
+            <div>Number of Appointments: <span id="numAppointments"><h2>
                 <?php $dash_app_query= "SELECT * FROM appointment_details";
                 $dash_app_query_run =mysqli_query($con ,$dash_app_query);
                 if($app_total=mysqli_num_rows($dash_app_query_run)){echo $app_total;}
-                ?>
+                ?></h2>
             </span></div>
         </div>
         <div class="appointment-rate">
