@@ -54,7 +54,7 @@ else{
           <li><a class="nav-link scrollto" href="doc_dashboard.php?user_phone=<?php echo urlencode($phone); ?>">Appointments</a></li>
         <li><a class="nav-link scrollto" href="patient_list.php?user_phone=<?php echo urlencode($phone); ?>">Patients</a></li>
           <li><a class="nav-link scrollto" href="doc_profile.php?user_phone=<?php echo urlencode($phone); ?>">Profile</a></li>
-          <li><a class="nav-link scrollto active" href="register.php">Logout</a></li>
+          <li><a class="nav-link scrollto active" href="login.html">Logout</a></li>
           
         </ul>
       </nav><!-- .navbar -->

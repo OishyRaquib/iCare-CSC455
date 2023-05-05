@@ -30,7 +30,7 @@ if(isset($_POST['send']))
     {
         session_start();
         $_SESSION['adminloginid']=$_POST['username'];
-        header("location:admin.html");
+        header("location:admin_panel.php");
        
     }
     else
