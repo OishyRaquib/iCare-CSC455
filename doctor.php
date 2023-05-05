@@ -53,7 +53,7 @@ $res = mysqli_query($link, "SELECT * FROM doctor_details WHERE doc_dept='{$dept_
          
              
               <li><a class="nav-link scrollto" href="login.html">Sign Out</a></li>
-              <li><a href="department.html" class="appointment-btn scrollto"><span class="d-none d-md-inline">Book </span> Appointment</a></li>
+              <li><a href="department.php?user_phone=<?php echo trim( $_SESSION['user_phone']); ?>" class="appointment-btn scrollto"><span class="d-none d-md-inline">Book </span> Appointment</a></li>
             </ul>
           </nav><!-- .navbar -->
         </div>
