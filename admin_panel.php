@@ -14,6 +14,7 @@ $result1 =mysqli_query($con,$query1);
 <style>#addDoctorBtn a {color: white; }</style>
 <style>#editBtn a {color: white; }</style>
 <style>#deleteBtn a {color: white; }</style>
+<style>#logout a {color: white; }</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Admin Dashboard</title>
@@ -134,7 +135,7 @@ $result1 =mysqli_query($con,$query1);
                     <td> <?php echo $row['doc_pass']; ?></td>
                     <td> <?php echo $row['doc_desc']; ?></td>
                     <td>
-                        <button id="editBtn"><a href=" ">Edit</a></button>
+                        <button id="editBtn"><a href="edit_doc.php?doc_phone=<?php echo $row['doc_phone']; ?> ">Edit</a></button>
                         <button id="deleteBtn"><a href="delete.php?doc_phone=<?php echo $row['doc_phone']; ?>">Delete</a></button>
                     </td>
                 </tr>
@@ -218,6 +219,6 @@ $result1 =mysqli_query($con,$query1);
     </section>
 
     <!-- Logout Button -->
-    <button id="logout">Logout</button>
+    <button id="logout"><a href="register.php">Logout</a> </button>
 </body>
 </html>
