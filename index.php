@@ -157,7 +157,7 @@ if (isset($_POST['submit'])) {
             </tr>
         </thead>
         <?php
-        $res = mysqli_query($link, "SELECT * FROM appointment_details");
+        $res = mysqli_query($link, "SELECT * FROM appointment_details WHERE app_pat_phone=$phone");
 
 
 
