@@ -67,9 +67,9 @@ $result2 =mysqli_query($con,$query2);
             </span></div>
 
             <div>Number of Appointments: <span id="numAppointments"> 
-                <?php $dash_doc_query= "SELECT * FROM doctor_details";
-                $dash_doc_query_run =mysqli_query($con ,$dash_doc_query);
-                if($doc_total=mysqli_num_rows($dash_doc_query_run)){echo $doc_total;}
+                <?php $dash_app_query= "SELECT * FROM appointment_details";
+                $dash_app_query_run =mysqli_query($con ,$dash_app_query);
+                if($app_total=mysqli_num_rows($dash_app_query_run)){echo $app_total;}
                 ?>
             </span></div>
         </div>
