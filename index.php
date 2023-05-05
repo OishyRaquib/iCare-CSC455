@@ -152,7 +152,7 @@ if (isset($_POST['submit'])) {
                 <th>Doctor Name</th>
                 <th>Phone No.</th>
                 <th>Department</th>
-                
+                <th>Day</th>
                 <th>Visiting Hours</th>
             </tr>
         </thead>
@@ -172,7 +172,7 @@ if (isset($_POST['submit'])) {
                <td>".$row['app_doc_name'] ."</td>
                <td>".$row['app_doc_phone'] ."</td>
                <td>".$row['app_doc_dept'] ."</td>
-            
+               <td>".$row['app_day'] ."</td>
                <td>".$row['app_time'] ."</td>
            </tr>";
        }
