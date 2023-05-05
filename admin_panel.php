@@ -3,8 +3,12 @@ session_start();
 require("dbconnection.php");
 $query= " select * from patient_details ";
 $result =mysqli_query($con,$query);
+
 $query1= " select * from doctor_details ";
 $result1 =mysqli_query($con,$query1);
+
+$query2= " select * from appointment_details ";
+$result2 =mysqli_query($con,$query2);
 
 ?>
 <!DOCTYPE html>
@@ -12,6 +16,7 @@ $result1 =mysqli_query($con,$query1);
 <head>
 <style>#addPatientBtn a {color: white; }</style>
 <style>#addDoctorBtn a {color: white; }</style>
+<style>#addAppointmentBtn a {color: white; }</style>
 <style>#editBtn a {color: white; }</style>
 <style>#deleteBtn a {color: white; }</style>
 <style>#logout a {color: white; }</style>
@@ -19,7 +24,7 @@ $result1 =mysqli_query($con,$query1);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Admin Dashboard</title>
     <link rel="stylesheet" href="assets/css/adminstyle.css">
-    <!-- Add JavaScript links here -->
+    <!--  JavaScript here -->
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -47,9 +52,26 @@ $result1 =mysqli_query($con,$query1);
     <section id="dashboard">
         <h1>Dashboard</h1>
         <div class="dashboard-stats">
-            <div>Number of Patients: <span id="numPatients">2</span></div>
-            <div>Number of Doctors: <span id="numDoctors">3</span></div>
-            <div>Number of Appointments: <span id="numAppointments">4</span></div>
+            <div>Number of Patients: <span id="numPatients">
+                <?php $dash_patient_query= "SELECT * FROM patient_details";
+                $dash_patient_query_run =mysqli_query($con ,$dash_patient_query);
+                if($pat_total=mysqli_num_rows($dash_patient_query_run)){echo $pat_total;}
+                ?>
+            </span></div>
+
+            <div>Number of Doctors: <span id="numDoctors">
+                <?php $dash_doc_query= "SELECT * FROM doctor_details";
+                $dash_doc_query_run =mysqli_query($con ,$dash_doc_query);
+                if($doc_total=mysqli_num_rows($dash_doc_query_run)){echo $doc_total;}
+                ?>
+            </span></div>
+
+            <div>Number of Appointments: <span id="numAppointments"> 
+                <?php $dash_doc_query= "SELECT * FROM doctor_details";
+                $dash_doc_query_run =mysqli_query($con ,$dash_doc_query);
+                if($doc_total=mysqli_num_rows($dash_doc_query_run)){echo $doc_total;}
+                ?>
+            </span></div>
         </div>
         <div class="appointment-rate">
             <!-- Graph or pie chart of appointment rate -->
@@ -88,7 +110,7 @@ $result1 =mysqli_query($con,$query1);
                     <td> <?php echo $row['pat_pass']; ?></td>
                     <td> <?php echo $row['pat_gender']; ?></td>
                     <td>   
-                    <button id="editBtn"><a href="edit.php?pat_phone=<?php echo $row['pat_phone']; ?>" >Edit</a></button>
+                    <button id="editBtn"><a href="edit_pat.php?pat_phone=<?php echo $row['pat_phone']; ?>" >Edit</a></button>
                     <button id="deleteBtn"><a href="delete.php?pat_phone=<?php echo $row['pat_phone']; ?>">Delete</a></button>
                     
                     </td>
@@ -158,10 +180,15 @@ $result1 =mysqli_query($con,$query1);
             <!-- Table Header -->
             <thead>
                 <tr>
-                    <th>Patient Name</th>
-                    <th>Doctor Name</th>
-                    <th>Date</th>
+                    <th>Day</th>
                     <th>Time</th>
+                    <th>Date</th>
+                    <th>Doctor </th>
+                    <th>Doctor Contact</th>
+                    <th>Department</th>
+                    <th>Patient</th> 
+                    <th>Patient Contact</th>
+                    <th>Problem</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -169,53 +196,33 @@ $result1 =mysqli_query($con,$query1);
             <tbody>
                 <!-- Appointment Row 1 -->
                 <tr>
-                    <td>John Doe</td>
-                    <td>Dr. Alice Johnson</td>
-                    <td>2023-04-01</td>
-                    <td>10:00 AM</td>
+                <?php
+                    while($row= mysqli_fetch_assoc($result2))
+                    {
+                   ?>
+                    <td> <?php echo $row['app_day']; ?></td>
+                    <td> <?php echo $row['app_time']; ?></td>
+                    <td> <?php echo $row['app_date']; ?></td>
+                    <td> <?php echo $row['app_doc_name']; ?></td>
+                    <td> <?php echo $row['app_doc_phone']; ?></td>
+                    <td> <?php echo $row['app_doc_dept']; ?></td>
+                    <td> <?php echo $row['app_pat_name']; ?></td>
+                    <td> <?php echo $row['app_pat_phone']; ?></td>
+                    <td> <?php echo $row['app_problem']; ?></td>
                     <td>
-                        <button>Edit</button>
-                        <button>Delete</button>
+                        <button id="editBtn"><a href="  ">Edit</a></button>
+                        <button id="deleteBtn"><a href="delete.php?app_pat_phone=<?php echo $row['app_pat_phone']; ?>">Delete</a></button>
                     </td>
                 </tr>
-                <!-- Appointment Row 2 -->
-                <tr>
-                    <td>Jane Smith</td>
-                    <td>Dr. Bob Brown</td>
-                    <td>2023-04-01</td>
-                    <td>11:00 AM</td>
-                    <td>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
-                <!-- Appointment Row 3 -->
-                <tr>
-                    <td>John Doe</td>
-                    <td>Dr. Carol Williams</td>
-                    <td>2023-04-02</td>
-                    <td>9:00 AM</td>
-                    <td>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
-                <!-- Appointment Row 4 -->
-                <tr>
-                    <td>Jane Smith</td>
-                    <td>Dr. Alice Johnson</td>
-                    <td>2023-04-02</td>
-                    <td>2:00 PM</td>
-                    <td>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
+                    <?php   
+                    }
+                    ?>
+             
             </tbody>
         </table>
 
         <!-- Add Appointment Button -->
-        <button id="addAppointmentBtn">Add Appointment</button>
+        <button id="addAppointmentBtn"><a href="admin_app.php">Add Appointment</a> </button>
     </section>
 
     <!-- Logout Button -->
