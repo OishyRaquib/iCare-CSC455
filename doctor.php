@@ -47,10 +47,11 @@ $res = mysqli_query($link, "SELECT * FROM doctor_details WHERE doc_dept='{$dept_
             <li><a class="nav-link scrollto" href="index.php?user_phone=<?php echo trim($_SESSION['user_phone']); ?>">Dashboard</a></li>
             <li><a class="nav-link scrollto" href="department.php?user_phone=<?php echo trim( $_SESSION['user_phone']); ?>">Departments</a></li>
             
-              <li><a class="nav-link scrollto" href="reportlist.html">Report</a></li>
-            
              
-              <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
+              <li><a class="nav-link scrollto" href="reportlist.php?user_phone=<?php echo trim( $_SESSION['user_phone']); ?>">Report</a></li>
+         
+         
+             
               <li><a class="nav-link scrollto" href="login.html">Sign Out</a></li>
               <li><a href="department.html" class="appointment-btn scrollto"><span class="d-none d-md-inline">Book </span> Appointment</a></li>
             </ul>
@@ -74,8 +75,24 @@ $res = mysqli_query($link, "SELECT * FROM doctor_details WHERE doc_dept='{$dept_
             <div class=image-contents>
                 <span class=overlay></span>
                 <div class=card-image>
-                    <img src=assets/images/doctor-1.jpg alt=doctor-1 class=image>
-                </div>
+                  ";
+                    if ($row['doc_name']== 'Oishy Raquib') {
+                      echo "   <img src=assets/images/doc7.jpg alt=doctor-1 class=image>";
+                  } 
+                 else if ($row['doc_name']== 'Jenny') {
+                    echo "   <img src=assets/images/doc2.jpg alt=doctor-1 class=image>";
+                } 
+               else if ($row['doc_name']== 'Aman ') {
+                  echo "   <img src=assets/images/doc3.jpg alt=doctor-1 class=image>";
+              } 
+               
+             else if ($row['doc_name']== 'James Peteren') {
+                echo "   <img src=assets/images/doc6.jpg alt=doctor-1 class=image>";
+            } 
+            else {
+              echo "   <img src=assets/images/side4.jpg alt=doctor-1 class=image>";
+            }
+              echo  "</div>
             </div>
 
             <div class=card-contents>

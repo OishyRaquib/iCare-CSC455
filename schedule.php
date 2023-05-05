@@ -59,7 +59,8 @@ $_SESSION['user_phone'] = $contact;
 </head>
 <body>
 
-<form method="post">
+<form action="index.php?user_phone=<?php echo trim($_SESSION['user_phone']); ?>" method="post">
+
     <header id="header" class="fixed-top">
         <div class="container">
     
@@ -139,6 +140,7 @@ $count = mysqli_num_rows($res1);
             <label class='ch'>
                 <input type='checkbox' name='schedule[]' value='".$schedule_id."'>
                 <span class='checkmark'></span>
+                <input type=hidden name=phone value=' $contact '>
             </label>
         </td>
         <td>".$row['day']."</td>
@@ -152,29 +154,6 @@ $count = mysqli_num_rows($res1);
     <button type="submit" name="submit" class="app">Confirm appointment</button>
 </form>
 
-<?php
-if (isset($_POST['submit'])) {
-    
-        $selected_schedules = $_POST['schedule'];
-        foreach ($selected_schedules as $schedule_id) {
-          
-            list($date, $time, $day,$contact,$doc_phone,$dept_name,$doc_name,$pat_name) = explode(',', $schedule_id);
-           
-            echo "Schedule on $date at $time with $pat_name has been selected <br>";
-         
-            $sql="INSERT INTO appointment_details (app_day, app_time,  app_doc_phone, app_doc_dept,app_pat_phone,app_doc_name,app_pat_name,app_date) VALUES ('$day','$time','$doc_phone','$dept_name','$contact','$doc_name','$pat_name','$date')";
-            
-           if (mysqli_query($link,$sql)){
-             
-           }
-           else{
-               echo"fail to execute" .mysqli_error($link);
-           }
-
-        }
-   
-}
-?>
 
 
 

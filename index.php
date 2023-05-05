@@ -17,8 +17,32 @@ else
       $res=mysqli_query($link,"SELECT* FROM patient_details where pat_phone='$phone'");
       $row = mysqli_fetch_assoc($res);
       $name = $row['pat_name'];
+      $age = $row['pat_age'];
       session_start();
       $_SESSION['user_phone'] = $phone;
+?>
+<?php
+if (isset($_POST['submit'])) {
+  $phone = $_POST['phone'];
+        $selected_schedules = $_POST['schedule'];
+        foreach ($selected_schedules as $schedule_id) {
+          
+            list($date, $time, $day,$contact,$doc_phone,$dept_name,$doc_name,$pat_name) = explode(',', $schedule_id);
+           
+            echo "Schedule on $date at $time with $pat_name has been selected <br>";
+         
+            $sql="INSERT INTO appointment_details (app_day, app_time,  app_doc_phone, app_doc_dept,app_pat_phone,app_doc_name,app_pat_name,app_date) VALUES ('$day','$time','$doc_phone','$dept_name','$contact','$doc_name','$pat_name','$date')";
+            
+           if (mysqli_query($link,$sql)){
+             
+           }
+           else{
+               echo"fail to execute" .mysqli_error($link);
+           }
+
+        }
+   
+}
 ?>
 
 
@@ -45,10 +69,10 @@ else
           <ul>
             <li><a class="nav-link scrollto" href="index.php?user_phone=<?php echo $_SESSION['user_phone']; ?>">Dashboard</a></li>
             <li><a class="nav-link scrollto" href="department.php?user_phone=<?php echo $_SESSION['user_phone']; ?>">Departments</a></li>
-            <li><a class="nav-link scrollto" href="reportlist.html">Report</a></li>
+            <li><a class="nav-link scrollto" href="reportlist.php?user_phone=<?php echo $_SESSION['user_phone']; ?>">Report</a></li>
          
             <li><a class="nav-link scrollto active" href="login.html">Sign Out</a></li>
-            <li><a href="department.html" class="appointment-btn scrollto"><span class="d-none d-md-inline">Book </span> Appointment</a></li>
+            <li><a href="department.php?user_phone=<?php echo $_SESSION['user_phone']; ?>" class="appointment-btn scrollto"><span class="d-none d-md-inline">Book </span> Appointment</a></li>
 
             
           </ul>
@@ -127,55 +151,35 @@ else
                 <th>Serial No.</th>
                 <th>Doctor Name</th>
                 <th>Phone No.</th>
-                <th>Consult</th>
-                <th>Kind of Doctor</th>
+                <th>Department</th>
+                
                 <th>Visiting Hours</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td> Dr. Tom Cruise</td>
-                <td>+441233312300</td>
-                <td>Standard</td>
-                <td>Routine checkup</td>
-                <td>08:15 - 09:45 AM</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Dr. Will Smith</td>
-                <td>+440128853235</td>
-                <td>Premium</td>
-                <td>Emergency</td>
-                <td>09:45 - 10:45 AM</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Dr. Harry Maguire</td>
-                <td>+441683439864</td>
-                <td>Neuro</td>
-                <td>Routine checkup</td>
-                <td>10:45 - 11:50 AM</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Dr. Ryan Reynolds</td>
-                <td>+441233312300</td>
-                <td>Premium</td>
-                <td>Cardiologist</td>
-                <td>12:00 - 13:45 PM</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td> Dr. Keanu Reeves</td>
-                <td>+449684599743</td>
-                <td>Premium</td>
-                <td>General Surgery</td>
-                <td>13:45 - 14:50 PM</td>
-            </tr>
+        <?php
+        $res = mysqli_query($link, "SELECT * FROM appointment_details");
+
+
+
+
+       echo "<tbody>";
+
+       $count=0;
+       while ($row = mysqli_fetch_assoc($res)) {
+         $count=$count+1;
+         echo  "<tr>
+               <td>".$count."</td>
+               <td>".$row['app_doc_name'] ."</td>
+               <td>".$row['app_doc_phone'] ."</td>
+               <td>".$row['app_doc_dept'] ."</td>
+            
+               <td>".$row['app_time'] ."</td>
+           </tr>";
+       }
            
-           
-        </tbody>
+         
+        echo "</tbody>";
+        ?>
     </table>
       
       
@@ -189,7 +193,9 @@ else
         />
         <br />
         <?php
-        echo"<h2 class='c'>".$name."</h2><p class='c1'>".$row['pat_age'] ."</p>"
+
+
+        echo"<h2 class='c'>".$name."</h2><p class='c1'>".$age ."</p>"
         ?>
         <br />
 

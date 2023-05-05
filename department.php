@@ -47,18 +47,19 @@ if (isset($_GET['user_phone'])) {
         <ul>
          
           <li><a class="nav-link scrollto active" href="index.php?user_phone=<?php echo trim($_SESSION['user_phone']); ?>">Dashboard</a></li>
-          <li><a class="nav-link scrollto" href="department.php?user_phone=<?php echo $_SESSION['user_phone']; ?>">Departments</a></li>
+          <li><a class="nav-link scrollto" href="department.php?user_phone=<?php echo trim($_SESSION['user_phone']); ?>">Departments</a></li>
 <!-- <<<<<<< Updated upstream -->
 
           
-<li><a class="nav-link scrollto" href="reportlist.html">Report</a></li>
+<li><a class="nav-link scrollto" href="reportlist.php?user_phone=<?php echo trim($_SESSION['user_phone']); ?>">Report</a></li>
 <!-- ======= -->
           
          
         
           
           <li><a class="nav-link scrollto" href="login.html">Sign Out</a></li>
-          <li><a href="department.html" class="appointment-btn scrollto"><span class="d-none d-md-inline">Book </span> Appointment</a></li>
+          <li><a href="department.php?user_phone=<?php echo $_SESSION['user_phone']; ?>" class="appointment-btn scrollto"><span class="d-none d-md-inline">Book </span> Appointment</a></li>
+
         </ul>
       </nav><!-- .navbar -->
     </div>
@@ -79,7 +80,21 @@ if (isset($_GET['user_phone'])) {
                 $desc=$row['dep_des'];
                 $rev=$row['dep_rev'];
 
-                echo " <div class='department'><div class='cardimage p3'> <p class='o'>".$name."</p></div>
+                echo " <div class='department'>";
+                if ($name == 'Cardiology') {
+                  echo "<div class='cardimage p3'> ";
+              } 
+              else if ($name == 'Neurology') {
+                echo "<div class='cardimage p2'> ";
+            } 
+            else if ($name == 'Hematology') {
+              echo "<div class='cardimage p1'> ";
+          } 
+          else{
+            echo "<div class='cardimage p1'> ";
+          }
+                
+               echo "<p class='o'>".$name."</p></div>
 
                 <div class='contant'>
      
@@ -96,7 +111,7 @@ if (isset($_GET['user_phone'])) {
           
           <div class='contant'>
 
-          <form action=doctor.php method=post>
+          <form action=doctor.php  method=post>
   <input type=hidden name=department value='$name'>
   <input type=hidden name=user_phone value=' $user_phone '>
   <button type=submit class=nav-l >See doctors</button>
