@@ -210,7 +210,7 @@ $result2 =mysqli_query($con,$query2);
                     <td> <?php echo $row['app_pat_phone']; ?></td>
                     <td> <?php echo $row['app_problem']; ?></td>
                     <td>
-                        <button id="editBtn"><a href="  ">Edit</a></button>
+                        <button id="editBtn"><a href="edit_app.php?app_pat_phone=<?php echo $row['app_pat_phone']; ?>">Edit</a></button>
                         <button id="deleteBtn"><a href="delete.php?app_pat_phone=<?php echo $row['app_pat_phone']; ?>">Delete</a></button>
                     </td>
                 </tr>
